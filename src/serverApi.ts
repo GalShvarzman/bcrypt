@@ -1,6 +1,6 @@
 import {delay} from "./helpers";
 
-const basicUrl = 'http://localhost:4000/';
+const basicUrl = '/';
 
 export function getAllContacts():Promise<any> {
     return fetch(basicUrl+'contacts').then((res)=>{

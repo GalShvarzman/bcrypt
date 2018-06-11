@@ -37,7 +37,8 @@ class App extends React.Component<{}, IAppState> {
 
     public handleSignUpSubmit = async (e)=>{
         e.preventDefault();
-        await appService.signUp(this.state.user);
+        const data = await appService.signUp(this.state.user);
+        if(data.message) alert(data.message);
     };
 
     public handleLoginSubmit = async (e)=>{
